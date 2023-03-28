@@ -16,9 +16,9 @@ repos:
     rev: v1.43.0
     hooks:
       - id: terraform_fmt
-      - id: terraform_docs
-        args:
-          - "--args=--anchor=false"
+      - id: terraform_docs_replace
+#        args:
+#          - "--args=--anchor=false"
       - id: terraform_tflint
         stages: [push]
         args:
