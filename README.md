@@ -9,5 +9,46 @@
 ## Usage
 *various commands
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-*auto populated information
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >=0.12 |
+| azurerm | ~>2.0 |
+| random | ~>3.0 |
+| tls | ~>4.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | ~>2.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_network_security_group.nsg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
+| [azurerm_resource_group.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_subnet.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
+| [azurerm_virtual_network.vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| address\_space | Address space of virtual network | `list(string)` | n/a | yes |
+| location | Location for the resource group | `string` | n/a | yes |
+| subnet\_address\_prefixes | Address prefixes for subnets | `list(string)` | n/a | yes |
+| tags | Map of tags that will be applied to the VNet | `map(string)` | `{}` | no |
+| virtual\_network\_name | Name of the vnet | `string` | n/a | yes |
+| vnet\_resource\_group\_name | Resource group name of the vnet | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
