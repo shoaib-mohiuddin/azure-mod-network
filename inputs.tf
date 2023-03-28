@@ -1,11 +1,11 @@
 variable "vnet_resource_group_name" {
   description = "Resource group name of the vnet"
-  type = string
+  type        = string
 }
 
 variable "location" {
   description = "Location for the resource group"
-  type = string
+  type        = string
 }
 
 variable "address_space" {
@@ -20,7 +20,12 @@ variable "subnet_address_prefixes" {
 
 variable "virtual_network_name" {
   description = "Name of the vnet"
-  type = string
+  type        = string
+}
+
+variable "subnet_name" {
+  description = "Name of the subnet"
+  type        = string
 }
 
 variable "tags" {
