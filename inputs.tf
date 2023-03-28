@@ -23,10 +23,10 @@ variable "virtual_network_name" {
   type        = string
 }
 
-variable "subnet_name" {
-  description = "Name of the subnet"
-  type        = string
-}
+#variable "subnet_name" {
+#  description = "Name of the subnet"
+#  type        = string
+#}
 
 variable "tags" {
   description = "Map of tags that will be applied to the VNet"
