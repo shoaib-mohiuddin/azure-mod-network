@@ -52,9 +52,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| subnet\_address\_prefix | n/a |
-| subnet\_name | n/a |
-| virtual\_network\_name | n/a |
-| vnet\_address\_space | n/a |
+| vm\_subnet\_id | n/a |
 | vnet\_resource\_group\_name | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
