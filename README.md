@@ -11,18 +11,13 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | >=0.12 |
-| azurerm | ~>2.0 |
-| random | ~>3.0 |
-| tls | ~>4.0 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | ~>2.0 |
+| azurerm | n/a |
 
 ## Modules
 
@@ -52,6 +47,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| foo | n/a |
 | vm\_subnet\_id | n/a |
 | vnet\_resource\_group\_name | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -5,3 +5,7 @@ output "vnet_resource_group_name" {
 output "vm_subnet_id" {
   value = azurerm_subnet.subnet.id
 }
+
+output "foo" {
+  value = "bar"
+}
