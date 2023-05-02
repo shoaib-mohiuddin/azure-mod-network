@@ -19,17 +19,13 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = var.subnet_name
+  for_each = {
+    for subnet in var.subnets :
+    subnet.name => subnet
+  }
+
+  name                 = each.value.name
+  address_prefixes     = each.value.address_prefixes
   resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = var.subnet_address_prefixes
-
-  #  delegation {
-  #    name = "delegation"
-  #
-  #    service_delegation {
-  #      name    = "Microsoft.ContainerInstance/containerGroups"
-  #      actions = ["Microsoft.Network/virtualNetworks/subnets/join/action", "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action"]
-  #    }
-  #  }
 }

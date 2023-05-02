@@ -13,23 +13,31 @@ variable "address_space" {
   type        = list(string)
 }
 
-variable "subnet_address_prefixes" {
-  description = "Address prefixes for subnets"
-  type        = list(string)
-}
+#variable "subnet_address_prefixes" {
+#  description = "Address prefixes for subnets"
+#  type        = list(string)
+#}
 
 variable "virtual_network_name" {
   description = "Name of the vnet"
   type        = string
 }
 
-variable "subnet_name" {
-  description = "Name of the subnet"
-  type        = string
-}
+#variable "subnet_name" {
+#  description = "Name of the subnet"
+#  type        = string
+#}
 
 variable "tags" {
   description = "Map of tags that will be applied to the VNet"
   type        = map(string)
   default     = {}
+}
+
+variable "subnets" {
+  description = "List of subnets"
+  type = list(object({
+    name             = string
+    address_prefixes = list(string)
+  }))
 }

@@ -28,5 +28,7 @@ func Test_Network(t *testing.T) {
 	})
 	defer terraform.Destroy(t, terraformOptionsNetworking)
 	terraform.InitAndApply(t, terraformOptionsNetworking)
+// 	terraform.InitAndPlan(t, terraformOptionsNetworking)
+// 	terraform.Apply(t, terraformOptionsNetworking)
 
 }

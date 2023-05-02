@@ -37,8 +37,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | address\_space | Address space of virtual network | `list(string)` | n/a | yes |
 | location | Location for the resource group | `string` | n/a | yes |
-| subnet\_address\_prefixes | Address prefixes for subnets | `list(string)` | n/a | yes |
-| subnet\_name | Name of the subnet | `string` | n/a | yes |
+| subnets | List of subnets | <pre>list(object({<br>    name             = string<br>    address_prefixes = list(string)<br>  }))</pre> | n/a | yes |
 | tags | Map of tags that will be applied to the VNet | `map(string)` | `{}` | no |
 | virtual\_network\_name | Name of the vnet | `string` | n/a | yes |
 | vnet\_resource\_group\_name | Resource group name of the vnet | `string` | n/a | yes |
@@ -47,7 +46,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| foo | n/a |
+| aks\_subnet\_id | n/a |
 | vm\_subnet\_id | n/a |
 | vnet\_resource\_group\_name | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
