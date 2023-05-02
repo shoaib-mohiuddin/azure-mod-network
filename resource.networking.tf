@@ -28,6 +28,4 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = each.value.address_prefixes
   resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-
-  tags = var.tags
 }
